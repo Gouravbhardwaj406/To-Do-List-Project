@@ -195,8 +195,6 @@ h1 {
   background-color: green;
 }
 
-
-
 .filter-options {
   margin: 1rem;
   position: relative;
@@ -229,5 +227,4 @@ select {
   height: 2rem;
   font-size: 1.5rem;
   padding-left: 1rem;
- 
 }
