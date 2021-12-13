@@ -2,43 +2,43 @@ const{ALLPROJECTS,VALIDATEINPUTS,MODIFYPROJECTS,CLEARINPUTS,FILTEROPTIONS,DISPLA
 
 let getAddToDoButton = document.querySelector("#addToDo");
 
-let getProjectName = document.querySelector("#projectname");
-let getTechnologyUsed = document.querySelector("#technology");
-let start, end;
+let ProjectName = document.querySelector("#projectname");
+let TechnologyUsed = document.querySelector("#technology");
+let startDate, completionDate;
 
 document
   .querySelector("#starting-date")
   .addEventListener("change", function () {
-    start = this.value;
+    startDate = this.value;
   });
 document
   .querySelector("#completion-date")
   .addEventListener("change", function () {
-    end = this.value;
+    completionDate = this.value;
   });
 
 getAddToDoButton.addEventListener("click", function () {
   let valid = VALIDATEINPUTS(
-    getProjectName.value,
-    getTechnologyUsed.value,
-    start,
-    end
+    ProjectName.value,
+    TechnologyUsed.value,
+    startDate,
+    completionDate
   );
   if (valid) {
     MODIFYPROJECTS(
-      getProjectName.value,
-      getTechnologyUsed.value,
-      start,
-      end
+      ProjectName.value,
+      TechnologyUsed.value,
+      startDate,
+      completionDate
     );
     console.log(ALLPROJECTS);
-    let fil = document.querySelector(".filter-todo1");
-    let ind = fil.selectedIndex;
-    console.log(fil.options[ind].value);
-    if (fil.options[ind].value === "all") {
+    let filter = document.querySelector(".filter-todo1");
+    let index = filter.selectedIndex;
+    console.log(filter.options[index].value);
+    if (filter.options[index].value === "all") {
       DISPLAYPROJECTS(ALLPROJECTS);
     } else {
-      DISPLAYPROJECTS(FILTEROPTIONS(fil.options[ind].value));
+      DISPLAYPROJECTS(FILTEROPTIONS(filter.options[index].value));
     }
   }
 });
