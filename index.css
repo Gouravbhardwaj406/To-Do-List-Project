@@ -1,0 +1,233 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-image: url(/images/image1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.project-heading {
+  width: 97%;
+  margin: 20px;
+  background-color: white;
+  height: 250px;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+h1 {
+  margin-left: 20px;
+}
+#input-heading-projectname {
+  margin-left: 20px;
+}
+#input-heading-projectname,
+#input-heading-technologyUsed {
+  width: 295px;
+  height: 40px;
+  overflow: hidden;
+  font-size: 25px;
+  vertical-align: middle;
+}
+#input-heading-starting-date,
+#input-heading-completion-date {
+  width: 240px;
+  height: 40px;
+
+  font-size: 25px;
+  vertical-align: middle;
+}
+#projectname {
+  margin-left: 20px;
+}
+#projectname,
+#technology {
+  width: 280px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+#starting-date,
+#completion-date {
+  width: 230px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+#addToDo {
+  width: 100px;
+  height: 40px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.input-heading {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#add {
+  height: 50px;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: green;
+  font-size: 30px;
+  font-weight: bold;
+}
+.paragraph-styling {
+  margin: 0px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  float: left;
+
+  background-color: aqua;
+  margin: 20px;
+}
+.myprojectdetails {
+  display: inline-block;
+
+  border: 1px solid black;
+  text-align: center;
+  font-size: 25px;
+  vertical-align: middle;
+}
+.project-details {
+  display: inline-block;
+  font-size: 56px;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+  font-weight: bolder;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+.abc {
+  text-align: center;
+}
+
+.heading {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  width: 1300px;
+}
+
+.heading1 {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1290px;
+}
+.projectdiv {
+  width: 100%;
+  height: 70px;
+  background-color: bisque;
+}
+
+.project1 {
+  width: 280px;
+}
+.tech {
+  width: 280px;
+}
+
+.start-date {
+  width: 250px;
+}
+.end-date {
+  width: 250px;
+}
+.exitt {
+  background-color: red;
+}
+
+.box1,
+.box2 {
+  overflow: hidden;
+  width: 270px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+.box3,
+.box4 {
+  width: 230px;
+  height: 40px;
+  margin-left: 10px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.box5 {
+  width: 220px;
+  height: 40px;
+  margin-left: 10px;
+  font-size: 25px;
+  vertical-align: middle;
+}
+
+.exitt {
+  height: 30px;
+  line-height: 30px;
+  font-weight: bold;
+}
+.complete {
+  height: 30px;
+  font-weight: bold;
+  line-height: 30px;
+  background-color: green;
+}
+
+
+
+.filter-options {
+  margin: 1rem;
+  position: relative;
+  height: 50px;
+  width: 100%;
+  font-size: 1.5rem;
+  overflow: hidden;
+  outline: none;
+  border: none;
+  border-radius: 3px;
+}
+.filter-todo {
+  position: absolute;
+  right: 20rem;
+  top: 0;
+  color: white;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: rgb(15, 77, 77);
+}
+.filter-todo1 {
+  position: absolute;
+  right: 9rem;
+  top: 0;
+}
+select {
+  color: #ff6f47;
+  width: 10rem;
+  cursor: pointer;
+  height: 2rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+ 
+}
