@@ -1,10 +1,10 @@
-const{ALLPROJECTS,VALIDATEINPUTS,MODIFYPROJECTS,CLEARINPUTS,FILTEROPTIONS,DISPLAYPROJECTS,FILTERPROJECTS,CREATECOMPLETEBUTTON,CREATEEXITBUTTON,CREATETAG} = require("./utils");
-
-let getAddToDoButton = document.querySelector("#addToDo");
+import { projects, validateProject, addProject, clearInputs, filterOptions, displayProjects, filterProjects, completeButton, exitButton, createTag } from "./utils.js";
+import { ERROR_MESSAGES, FILTERVALUES } from "./constants.js"
+let addButton = document.querySelector("#addToDo");
 
 let ProjectName = document.querySelector("#projectname");
 let TechnologyUsed = document.querySelector("#technology");
-let startDate, completionDate;
+let startDate, completeDate;
 
 document
   .querySelector("#starting-date")
@@ -14,33 +14,24 @@ document
 document
   .querySelector("#completion-date")
   .addEventListener("change", function () {
-    completionDate = this.value;
+    completeDate = this.value;
   });
 
-getAddToDoButton.addEventListener("click", function () {
-  let valid = VALIDATEINPUTS(
-    ProjectName.value,
-    TechnologyUsed.value,
-    startDate,
-    completionDate
-  );
-  if (valid) {
-    MODIFYPROJECTS(
-      ProjectName.value,
-      TechnologyUsed.value,
-      startDate,
-      completionDate
-    );
-    console.log(ALLPROJECTS);
+addButton.addEventListener("click", function () {
+  let project = {
+    name: ProjectName.value,
+    technologyUsed: TechnologyUsed.value,
+    startingDate: startDate,
+    completionDate: completeDate
+  }
+  let isvalid = validateProject(project);
+  if (isvalid) {
+    addProject(project);
     let filter = document.querySelector(".filter-todo1");
     let index = filter.selectedIndex;
-    console.log(filter.options[index].value);
-    if (filter.options[index].value === "all") {
-      DISPLAYPROJECTS(ALLPROJECTS);
-    } else {
-      DISPLAYPROJECTS(FILTEROPTIONS(filter.options[index].value));
-    }
-  }
-});
+    displayProjects(filter.options[index].value);
 
-FILTERPROJECTS();
+  }
+
+});
+filterProjects();
