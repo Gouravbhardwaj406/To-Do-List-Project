@@ -1,15 +1,15 @@
-ERROR_MESSAGES={
-    PROJECT_NAME_NOT_PROVIDED:'PLEASE PROVIDE PROJECT NAME',
-    TECHNOLOGY_USED_NOT_PROVIDED:'PLEASE PROVIDE TECHNOLOGY USED',
-    STARTING_DATE_NULL:'PLEASE PROVIDE STARTING DATE',
-    COMPLETION_DATE_NULL:'PLEASE PROVIDE COMPLETION DATE'
+let ERROR_MESSAGES = {
+    PROJECT_NAME_NOT_PROVIDED: 'Please provide project name',
+    TECHNOLOGY_USED_NOT_PROVIDED: 'Please provide technology used',
+    STARTING_DATE_NULL: 'Please provide starting date',
+    COMPLETION_DATE_NULL: 'Please provide completion date'
 
 }
 
-FILTERVALUES={
-    ALL:"all",
-    COMPLETED:"completed",
-    PENDING:"pending"
+let FILTERVALUES = {
+    ALL: "all",
+    COMPLETED: "completed",
+    PENDING: "pending"
 }
 
-module.exports={ERROR_MESSAGES,FILTERVALUES};
+export { ERROR_MESSAGES, FILTERVALUES };
