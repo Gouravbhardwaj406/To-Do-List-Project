@@ -82,15 +82,15 @@ const projectDiv = function (project, parentDiv) {
 }
 
 const displayProjects = function (filter) {
-  let arr;
+  let displayArray;
   if (filter === FILTERVALUES.ALL) {
-    arr = projects;
+    displayArray = projects;
   }else {
-    arr = filterOptions(filter);
+    displayArray = filterOptions(filter);
   }
   let mainDiv = document.querySelector("#container");
   mainDiv.innerHTML = "";
-  for (let project of arr) {
+  for (let project of displayArray) {
     projectDiv(project, mainDiv);
   }
 };
